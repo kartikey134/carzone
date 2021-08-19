@@ -131,12 +131,12 @@
               <div class="slick-slide-item">
                   <div class="car-box-3">
                       <div class="car-thumbnail">
-                          <a href="car-details.html" class="car-img">
+                          <a href="{% url 'carDetail' car.id %}" class="car-img">
                               <div class="tag-2">Featured</div>
                               <div class="price-box">
-                                  <span class="del"><del>$805.00</del></span>
+                                  <span class="del"><del>$ {{ car.price | intcomma }}</del></span>
                                   <br>
-                                  <span>${{ car.price | intcomma }}</span>
+                                  <span>$ 22,000</span>
                               </div>
                               <img class="d-block w-100" src="{{ car.carPhoto.url }}" alt="car" style="min-height: 262px; max-height: 262px;">
                           </a>
@@ -176,10 +176,10 @@
                       </div>
                       <div class="detail">
                           <h1 class="title">
-                              <a href="car-details.html">{{ car.carTitle }}</a>
+                              <a href="{% url 'carDetail' car.id %}">{{ car.carTitle }}</a>
                           </h1>
                           <div class="location">
-                              <a href="car-details.html">
+                              <a href="{% url 'carDetail' car.id %}">
                                   <i class="flaticon-pin"></i>{{ car.state }}, {{ car.city }}
                               </a>
                           </div>
@@ -222,7 +222,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="car-thumbnail">
-                        <a href="car-details.html" class="car-img">
+                        <a href="{% url 'carDetail' car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
                             <img class="d-block w-100" src="{{ car.carPhoto.url }}" alt="car" style="min-height: 262px; max-height: 262px;">
                             <div class="facilities-list clearfix">
@@ -275,10 +275,10 @@
                     </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="car-details.html">{{ car.carTitle }}</a>
+                            <a href="{% url 'carDetail' car.id %}">{{ car.carTitle }}</a>
                         </h1>
                         <div class="location">
-                            <a href="car-details.html">
+                            <a href="{% url 'carDetail' car.id %}">
                                 <i class="flaticon-pin"></i>{{ car.state }}, {{ car.city }}
                             </a>
                         </div>
@@ -388,7 +388,7 @@
                                         <span class="del-2">$1050.00</span>
                                     </div>
                                     <div class="">
-                                        <a href="car-details.html" class="btn btn-md btn-round btn-theme">Convertible</a>
+                                        <a href="" class="btn btn-md btn-round btn-theme">Convertible</a>
                                     </div>
                                 </div>
                             </div>
@@ -426,7 +426,7 @@
                                 <div class="description">
                                     <h3>Description</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a href="car-details.html" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                    <a href="" class="btn btn-md btn-round btn-theme">Show Detail</a>
                                 </div>
                             </div>
                         </div>
